@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Review Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #E8DAEF;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #8854D0;
+            color: #FCF3CF;
+            padding: 10px;
+            text-align: center;
+            font-family: 'Lobster', cursive;
+            font-size: 2em;
+        }
+        .review-card {
+            margin: 20px auto;
+            width: 70%;
+            border: 1px solid #8854D0;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            background-color: #FCF3CF;
+        }
+        .review-image {
+            width: 100%;
+        }
+        .review-content {
+            margin-top: 20px;
+        }
+        .artist, .album {
+            font-family: 'Lobster', cursive;
+            color: #6F1E51;
+        }
+        .rating {
+            color: #4A69BB;
+            font-size: 2em;
+            margin-top: 10px;
+        }
+        .music-player {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="Your-Logo-Here.png" alt="Your Logo" height="80">
+        <h1>Music Review</h1>
+    </div>
+    <div class="review-card">
+        <img class="review-image" src="Your-Review-Image-Here.jpg" alt="Review Image">
+        <div class="review-content">
+            <h2 class="artist">Artist: <span id="artist-name">Artist-Name</span></h2>
+            <h3 class="album">Album: <span id="album-title">Album-Title</span></h3>
+            <p id="album-review">Album-Review</p>
+            <div class="rating">
+                Rating: <span id="rating">Rating</span>/10
+            </div>
+            <div class="music-player">
+                <audio controls>
+                    <source src="https://www.youtube.com/watch?v=cMHyxHwhFYk" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div align="center">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/cMHyxHwhFYk" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
