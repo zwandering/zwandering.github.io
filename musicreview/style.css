@@ -1,0 +1,111 @@
+body {
+    background-color: #f3f2f7;
+    font-family: 'Lato', sans-serif, 'Comfortaa';
+    color: #4b4453;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Parisienne', cursive;
+    color: #6d597a;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    border-bottom: 1px solid #6d597a;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #b56576;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: 10px 0;
+}
+
+.composer {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.piece {
+    background-color: #e0e5ec;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.player {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.composer {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.composer img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.composer-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.composer h3 {
+    margin: 0;
+}
+
+.composer h3 a {
+    color: #6d597a;
+    text-decoration: none;
+}
+
+.composer p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+}
+body {
+    background-color: #f3f2f7;
+    font-family: 'Lato', sans-serif;
+    color: #4b4453;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Rest of your CSS... */

@@ -1,84 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Music Review Page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            background-color: #E8DAEF;
-            margin: 0;
-            padding: 0;
-        }
-        .header {
-            background-color: #8854D0;
-            color: #FCF3CF;
-            padding: 10px;
-            text-align: center;
-            font-family: 'Lobster', cursive;
-            font-size: 2em;
-        }
-        .review-card {
-            margin: 20px auto;
-            width: 70%;
-            border: 1px solid #8854D0;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-            padding: 20px;
-            background-color: #FCF3CF;
-        }
-        .review-image {
-            width: 100%;
-        }
-        .review-content {
-            margin-top: 20px;
-        }
-        .artist, .album {
-            font-family: 'Lobster', cursive;
-            color: #6F1E51;
-        }
-        .rating {
-            color: #4A69BB;
-            font-size: 2em;
-            margin-top: 10px;
-        }
-        .music-player {
-            margin-top: 20px;
-        }
-    </style>
+    <title>Music Review</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <div class="header">
-        <!-- <img src="Your-Logo-Here.png" alt="Your Logo" height="80"> -->
-        <h1>Music Review</h1>
-    </div>
-
-    <div class="review-card">
-        <img class="review-image" src="Your-Review-Image-Here.jpg" alt="Review Image">
-        <div class="review-content">
-            <h2 class="artist">Rachmaninoff</h2>
-            <h3 class="album"></h3>
-            <p id="album-review">Album-Review</p>
-            <div class="rating">
-                Rating: <span id="rating">Rating</span>/10
+    <div class="container">
+        <h1>Welcome to the Music Review Site!</h1>
+        <p>This is a place where we share my reviews of various pieces by different composers. Feel free to explore!</p>
+        <h3>News</h3>
+        <p><strong>May 2023:</strong> After 1 year, the music review page is finally updated. This time I add a female compoer section, storing my review
+         for some wonderful pieces from pre-baroque to modern times. I summarize them together since I haven't collect enough pieces to separate composers individually.</p>
+        <h2>Composers</h2>
+        <div class="composer-list">
+            <div class="composer-list">
+                <div class="composer">
+                    <img src="images/Chopin-1.jpg" alt="Composer 1">
+                    <div class="composer-info">
+                        <h3><a href="composers/chopin.html">Frédéric Chopin</a></h3>
+                        <p>Description of Composer 1...</p>
+                    </div>
+                </div>
+                <!-- More composer sections... -->
+                <div class="composer">
+                    <img src="images/Rach.jpg" alt="Composer 1">
+                    <div class="composer-info">
+                        <h3><a href="composers/rach.html">Sergei Rachmaninoff</a></h3>
+                        <p>Description of Composer 2...</p>
+                    </div>
+                </div>
+                <div class="composer">
+                    <img src="images/Maria_Szymanowska.jpg" alt="Composer 1">
+                    <div class="composer-info">
+                        <h3><a href="composers/female.html">Female Composers Collection</a></h3>
+                        <p></p>
+                    </div>
+                </div>
             </div>
-            <div align="center">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/cMHyxHwhFYk" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-
-    <div class="review-card">
-        <img class="review-image" src="Your-Review-Image-Here.jpg" alt="Review Image">
-        <div class="review-content">
-            <h2 class="artist">Artist: <span id="artist-name">Artist-Name</span></h2>
-            <h3 class="album">Album: <span id="album-title">Album-Title</span></h3>
-            <p id="album-review">Album-Review</p>
-            <div class="rating">
-                Rating: <span id="rating">Rating</span>/10
-            </div>
-            <div align="center">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/cMHyxHwhFYk" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
+            
+            <!-- More composer sections... -->
         </div>
     </div>
 </body>
