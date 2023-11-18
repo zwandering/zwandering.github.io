@@ -1,6 +1,16 @@
-@article{BarronTsai2017,
-author = {Jonathan T. Barron and Yun-Ta Tsai},
-title = {Fast Fourier Color Constancy},
-journal = {CVPR},
-year = {2017},
-}
+\begin{table}[t]
+\centering
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{ccccc}
+\hline
+            & Ours            & w/o \textit{UAC} & w/o $\mathcal{L}_{adv}$ & w/o $\mathcal{L}_{aes}$ \\ \hline
+Gram Loss   & \textbf{0.1710} & 0.1885    & 0.4418                  & 0.2161                  \\
+SSIM        & \textbf{0.3971} & 0.3925    & 0.2989                  & 0.3959                  \\
+Aes Score       & 0.4597          & 0.4401    & \textbf{0.7846}         & 0.4003                  \\
+Decep. Rate & \textbf{0.2793} & 0.2783    & 0.0433                  & 0.2733                  \\ 
+User Score  & \textbf{2.7988} & 1.7321    & 1.4654                  & 0.0037                  \\ \hline
+\end{tabular}
+\caption{Quantitative results of ablation studies}
+\label{tab:ablation}
+\vspace{-0.27in}
+\end{table}
