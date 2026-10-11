@@ -36,9 +36,41 @@
                   </p>
                 </td>
                 <td style="padding:2.5%;width:60%;max-width:60%;text-align:right;">
-                  <a href="images/me_2.jpg">
-                    <img style="width:75%;max-width:75%" alt="profile photo" src="images/me_2.jpg" class="hoverZoomLink">
+                  <!--
+                    Profile photo: a random file from images/profile/ is shown on every visit.
+                    The candidates are listed in images/profile/photos.txt (one file name per line).
+                    After adding or removing photos, run ./scripts/update_profile_photos.sh to
+                    refresh that list. The script below fills in the src; if it cannot load the
+                    list it falls back to the default photo.
+                  -->
+                  <a id="profile-photo-link" href="images/profile/me_2.jpg">
+                    <img id="profile-photo" style="width:75%;max-width:75%" alt="profile photo" class="hoverZoomLink">
+                    <noscript><img style="width:75%;max-width:75%" alt="profile photo" src="images/profile/me_2.jpg" class="hoverZoomLink"></noscript>
                   </a>
+                  <script>
+                    (function () {
+                      var dir = 'images/profile/';
+                      var fallback = dir + 'me_2.jpg';
+                      var img = document.getElementById('profile-photo');
+                      var link = document.getElementById('profile-photo-link');
+
+                      function show(src) {
+                        img.src = src;
+                        link.href = src;
+                      }
+
+                      fetch(dir + 'photos.txt')
+                        .then(function (res) { return res.ok ? res.text() : ''; })
+                        .then(function (text) {
+                          var photos = text.split('\n')
+                            .map(function (line) { return line.trim(); })
+                            .filter(function (line) { return line.length > 0; });
+                          if (photos.length === 0) { show(fallback); return; }
+                          show(dir + photos[Math.floor(Math.random() * photos.length)]);
+                        })
+                        .catch(function () { show(fallback); });
+                    })();
+                  </script>
                 </td>
               </tr>
             </tbody>

@@ -129,3 +129,10 @@ name {
 span.highlight {
   background-color: #ffffd0;
 }
+
+/* The profile photo's src is chosen by a script in index.html (a random file from
+   images/profile/). Keep the element hidden until the script has filled in a src,
+   so no alt text or broken-image icon shows in the meantime. */
+#profile-photo:not([src]) {
+  display: none;
+}
