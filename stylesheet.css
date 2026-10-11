@@ -129,3 +129,29 @@ name {
 span.highlight {
   background-color: #ffffd0;
 }
+
+/* Profile photo (see index.html): a random photo from images/self/ with a
+   "<year> at <place>" caption underneath. */
+#profile-photo-figure {
+  display: inline-block;
+  width: 75%;
+  max-width: 75%;
+  margin: 0;
+  text-align: center;
+}
+
+#profile-photo-figure img {
+  width: 100%;
+}
+
+#profile-photo-caption {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #555;
+}
+
+/* The photo's src is filled in by the script. Keep the element hidden until then,
+   so no alt text or broken-image icon shows in the meantime. */
+#profile-photo:not([src]) {
+  display: none;
+}
