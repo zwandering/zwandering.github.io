@@ -155,3 +155,29 @@ span.highlight {
 #profile-photo:not([src]) {
   display: none;
 }
+
+/* Publications: on narrow screens put each teaser image above its text
+   instead of squeezing both into one row. */
+@media (max-width: 600px) {
+  .pub-table tr,
+  .pub-table td {
+    display: block;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .pub-table td:first-child {
+    padding: 0 20px !important;
+    text-align: center;
+  }
+
+  .pub-table td:first-child img {
+    width: 75%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .pub-table td:last-child {
+    padding: 8px 20px 0;
+  }
+}
